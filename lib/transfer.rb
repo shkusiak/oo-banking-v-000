@@ -9,7 +9,7 @@ class Transfer
   end
 
   def valid?
-    if bank_account.balance > @amount
+    if bank_account.@balance > @amount
       true
     else
       false
