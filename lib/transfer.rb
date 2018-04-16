@@ -7,15 +7,15 @@ class Transfer
     @status = "pending"
     @amount = amount
   end
-  
+
   def valid?
     if bank_account.balance > @amount
       true
     else
       false
-    end  
+    end
   end
-  
+
   def execute_transaction
   end
   def reverse_transfer
