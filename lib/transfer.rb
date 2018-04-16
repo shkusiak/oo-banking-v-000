@@ -10,7 +10,7 @@ class Transfer
     @balance = balance
   end
 
-  def self.valid?
+  def valid?
     #if bank_account.balance > @amount
     #  true
     #else
