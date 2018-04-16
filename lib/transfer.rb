@@ -1,21 +1,18 @@
 class Transfer
-  attr_accessor :amount, :sender, :receiver, :status#, :bank_account
-  attr_reader :balance
+  attr_accessor :amount, :sender, :receiver #, :bank_account
+  attr_reader :status
 
   def initialize(sender, receiver, amount)
     @sender = sender
     @receiver = receiver
     @status = "pending"
     @amount = amount
-    @balance = balance
   end
 
   def valid?
-    #if bank_account.balance > @amount
-    #  true
-    #else
-  #    false
-  #  end
+    if sender.valid? && receiver.valid?
+      true
+    end
   end
 
   def execute_transaction
